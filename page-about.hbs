@@ -3,13 +3,651 @@
 {{#post}}
 
   <article class="{{post_class}}">
-    <header>
-      <h1 id="post-title">About me</h1>
-    </header>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,500,600,700|Open+Sans:400,500,600,700' rel='stylesheet' type='text/css'>
+    <style>
+      .clear-margin {
+  margin: 0;
+}
+.space-top {
+  margin-top: 10px;
+}
+.space-right {
+  margin-right: 10px;
+}
+.icon-left {
+  margin-right: 5px;
+}
+.icon-right {
+  margin-left: 5px;
+}
+.labels {
+  word-spacing: 5px;
+  line-height: 2;
+}
+.label-keyword {
+  display: inline-block;
+  background: #7eb0db;
+  color: white;
+  font-size: 0.9em;
+  padding: 5px;
+  border: 1px solid #357ebd;
+}
+.link-disguise {
+  color: inherit;
+}
+.link-disguise:hover {
+  color: inherit;
+}
+@media (max-width: 992px) {
+  .clear-margin-sm {
+    margin-bottom: 0;
+  }
+}
+body {
+  font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #f0f0f0;
+  color: #333333;
+  font-size: 16px;
+}
+.text-bolder {
+  font-weight: bold;
+}
+@media only screen {
+  .container {
+    max-width: 50em;
+  }
+}
+@media (max-width: 480px) {
+  ul {
+    padding-left: 25px;
+  }
+  /*
+        .mobile-title {
+            display: inline-block;
+            margin-left: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            vertical-align: middle;
+        }
+*/
+  .background-details {
+    display: block;
+  }
+  .background-details .icon {
+    max-width: inherit;
+    min-width: inherit;
+    text-align: left;
+  }
+  .background-details .icon,
+  .background-details .info {
+    display: block;
+    padding: 10px 0;
+  }
+  .background-details .title {
+    display: none;
+  }
+  .card-nested {
+    padding: 5px 0;
+  }
+}
+.profile-card {
+  display: table;
+  width: 100%;
+}
+.profile-pic {
+  display: table-cell;
+  vertical-align: top;
+  padding: 1rem 4rem 0 0 ;
+}
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+}
+.contact-details {
+  display: table-cell;
+}
+.contact-details .detail {
+  display: inline-block;
+  line-height: 2;
+  margin-right: 2rem;
+}
+.contact-details .detail .icon {
+  padding-right: 7px;
+  color: #888;
+}
+.contact-details .detail .info {
+  font-size: 0.8em;
+}
+.social-links {
+  line-height: 2.5;
+}
+.social-link {
+  display: block;
+}
+.social-link span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.social-link:hover,
+.social-link:focus {
+  text-decoration: none;
+}
+.social-link .fa {
+  text-align: center;
+  width: 2em;
+}
+.fa-github {
+  color: #454545;
+}
+.fa-github:hover,
+.fa-github:focus {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+.fa-twitter {
+  color: #33ccff;
+}
+.fa-twitter:hover,
+.fa-twitter:focus {
+  text-decoration: none;
+  color: #00bfff;
+}
+.fa-rss {
+  color: #f36f24;
+}
+.fa-rss:hover,
+.fa-rss:focus {
+  text-decoration: none;
+  color: #d8560c;
+}
+.fa-linkedin {
+  color: #007bb6;
+}
+.fa-linkedin:hover,
+.fa-linkedin:focus {
+  text-decoration: none;
+  color: #005983;
+}
+.fa-skype {
+  color: #12a5f4;
+}
+.fa-skype:hover,
+.fa-skype:focus {
+  text-decoration: none;
+  color: #0986ca;
+}
+.fa-stack-overflow {
+  color: #8e8e92;
+}
+.fa-stack-overflow:hover,
+.fa-stack-overflow:focus {
+  text-decoration: none;
+  color: #747479;
+}
+.fa-soundcloud {
+  color: #e8822d;
+}
+.fa-soundcloud:hover,
+.fa-soundcloud:focus {
+  text-decoration: none;
+  color: #cc6916;
+}
+.fa-pinterest {
+  color: #bd091f;
+}
+.fa-pinterest:hover,
+.fa-pinterest:focus {
+  text-decoration: none;
+  color: #8c0717;
+}
+.fa-vimeo {
+  color: #17b3e8;
+}
+.fa-vimeo:hover,
+.fa-vimeo:focus {
+  text-decoration: none;
+  color: #128fba;
+}
+.fa-behance {
+  color: #2c98cf;
+}
+.fa-behance:hover,
+.fa-behance:focus {
+  text-decoration: none;
+  color: #2379a5;
+}
+.fa-codepen {
+  color: #1c1c1c;
+}
+.fa-codepen:hover,
+.fa-codepen:focus {
+  text-decoration: none;
+  color: #020202;
+}
+.fa-foursquare {
+  color: #fa4778;
+}
+.fa-foursquare:hover,
+.fa-foursquare:focus {
+  text-decoration: none;
+  color: #f91554;
+}
+.fa-reddit {
+  color: #545454;
+}
+.fa-reddit:hover,
+.fa-reddit:focus {
+  text-decoration: none;
+  color: #3b3b3b;
+}
+.fa-spotify {
+  color: #acd200;
+}
+.fa-spotify:hover,
+.fa-spotify:focus {
+  text-decoration: none;
+  color: #829f00;
+}
+.fa-dribbble {
+  color: #ce366f;
+}
+.fa-dribbble:hover,
+.fa-dribbble:focus {
+  text-decoration: none;
+  color: #a82959;
+}
+.fa-facebook {
+  color: #4b6daa;
+}
+.fa-facebook:hover,
+.fa-facebook:focus {
+  text-decoration: none;
+  color: #3b5687;
+}
+.fa-angellist {
+  color: #000000;
+}
+.fa-angellist:hover,
+.fa-angellist:focus {
+  text-decoration: none;
+  color: #000000;
+}
+.fa-bitbucket {
+  color: #205081;
+}
+.fa-bitbucket:hover,
+.fa-bitbucket:focus {
+  text-decoration: none;
+  color: #163758;
+}
+.fa-google-plus {
+  color: #bf2a1d;
+}
+.fa-google-plus:hover,
+.fa-google-plus:focus {
+  text-decoration: none;
+  color: #932016;
+}
+.background-card h4 {
+  font-variant: small-caps;
+  color: #777777;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  line-height: 1.2;
+}
+.background-card h4:not(:first-child) {
+  margin-top: 2em;
+}
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+h4 > .fa,
+h4 > .title {
+  display: inline-block;
+  vertical-align: baseline;
+}
+h4 > .fa {
+  width: 4rem;
+}
+.content {
+  line-height: 1.5;
+}
+.card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  padding: 2em 3.5em;
+}
+.card-nested {
+  padding: 1.5rem 0 1.5rem 4.2rem;
+}
+.card-wrapper {
+  padding: 5px;
+}
+.enumeration:not(:last-child):after {
+  content: ", ";
+}
+.enumeration:last-child:after {
+  content: ".";
+}
+@media only screen and (max-width: 768px) {
+  .profile-card {
+    display: block;
+  }
+  .contact-details,
+  .profile-pic {
+    display: block;
+    text-align: center;
+  }
+  .card-nested {
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .contact-details .detail {
+    display: block;
+  }
+}
+.card-skills {
+  position: relative;
+}
+.skill-info {
+  margin-left: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .skill {
+    border-left: 9px solid #555555;
+  }
+  .skill.beginner {
+    height: 50%;
+    border-color: #e74c3c;
+  }
+  .skill.intermediate {
+    height: 70%;
+    border-color: #f1c40f;
+  }
+  .skill.advanced {
+    border-color: #5cb85c;
+  }
+  .skill.master {
+    border-color: black;
+  }
+}
+@media (max-width: 768px) {
+  .quote {
+    font-size: inherit;
+  }
+}
+@media print {
+  body {
+    font-size: 10pt;
+  }
+  a[href]:after {
+    content: none !important;
+  }
+  .pagebreak {
+    page-break-before: always;
+  }
+  .background-card h4:not(:first-child) {
+    margin-top: 0 !important;
+  }
+  .card {
+    border: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 100%;
+    width: 100%;
+  }
+  .contact-details .detail .icon {
+    color: #888 !important;
+  }
+  .background-card h4 {
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 1em !important;
+  }
+  h4 > .fa {
+    display: none !important;
+  }
+  .card-nested {
+    padding: .5rem 0 .5rem 0;
+  }
+  .labels {
+    display: inline;
+  }
+  .skill-info {
+    margin-left: 0;
+  }
+  blockquote {
+    font-size: 100%;
+  }
+}
+  .euler {
+    float: right;
+    padding-top: 10px;
+  }
+    </style>
+    <div class="container">
+      <section class="row">
+        <div class="card-wrapper">
+          <div class="card">
+            <div class="profile-card">
+                <div class="profile-pic">
+                  <img class="media-object img-circle center-block"  data-src="holder.js/100x100"
+                    alt="Benjamin Yu" src="http://www.gravatar.com/avatar/70a59a47dc1a177d616fa23b9ebdd24d?s=100&amp;r=pg&amp;d=mm" itemprop="image">
+                </div>
+                <div class="contact-details">
+                  <div class="name-and-profession">
+                    <h3 class="text-bolder name" itemprop="name"> Benjamin Yu</h3>
+                    <h5 class="text-muted" itemprop="jobTitle">Software Engineer</h5>
+                  </div>
 
-    <section class="{{post_class}}">
-      {{content}}
-    </section>
+                    <div class="detail">
+                      <span class="icon">
+                        <i class="fa fa-lg fa-envelope"></i>
+                      </span>
+
+                      <span class="info">
+                        <a href="/cdn-cgi/l/email-protection#a3cec6e3c1c6cd8edad68dc0ccce" class="link-disguise" itemprop="email"><span class="__cf_email__" data-cfemail="9ef3fbdefcfbf0b3e7ebb0fdf1f3">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("data-cfhash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}t.parentNode.removeChild(t);}}catch(u){}}()/* ]]> */</script></a>
+                      </span>
+                    </div>
+
+                    <div class="detail">
+                      <span class="icon">
+                        <i class="fa fa-lg fa-phone"></i>
+                      </span>
+
+                      <a href="tel://(647) 716-8026" class="link-disguise info" itemprop="telephone">
+                        (647) 716-8026
+                      </a>
+                    </div>
+
+                    <div class="detail">
+                      <span class="icon">
+                        <i class="fa fa-lg fa-map-marker"></i>
+                      </span>
+
+                        <span class="info">
+                          L6C 1X5, Ontario,
+                          CA
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <div class="social-links">
+                <a class="social-link euler" href="https://projecteuler.net" target="_blank">
+                    <img src="https://projecteuler.net/profile/LeStealth.png">
+                </a>
+                <a class="social-link" href="http://twitter.com/_ben_yu" target="_blank">
+                  <span class="fa fa-twitter fa-2x"></span>
+                  <span class="social-link-text">twitter.com/_ben_yu</span>
+                </a>
+                <a class="social-link" href="http://github.com/ben-yu" target="_blank">
+                  <span class="fa fa-github fa-2x"></span>
+                  <span class="social-link-text">github.com/ben-yu</span>
+                </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="row">
+        <div class="card-wrapper">
+          <div class="card background-card">
+
+            <h4 id="about"> <span class="fa fa-lg fa-user"></span> <span class="title">About</span> </h4>
+            <div class="card-nested" itemprop="description">
+              <p> Hi, I&#x27;m Benjamin Yu, a software developer from Toronto. I&#x27;m a sushi addict and a stats nerd. If I&#x27;m not combing through NBA stats, or looking into burrito ranking systems, I&#x27;ll be trying to write an antigravity library in Python. </p>
+            </div>
+
+            <h4 id="work-experience"> <span class="fa fa-lg fa-pencil-square-o"></span> <span class="title">Work Experience</span> </h4>
+            <ul class="list-unstyled">
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Software Developer</strong>,
+                      <a href="http://vantageanalytics.com" target="_blank">Vantage Analytics</a>
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        <span class="space-right"> Oct 2014 -  Present  </span>
+                         <span> <i class="fa fa-clock-o icon-left"></i> 11 months </span> 
+                      </small>
+                    </p>
+                    <p>Analytics/Marketing Automation platform for e-commerce stores.</p>
+                      <ul>
+                          <li> Built integrations into Facebook Ads and Mailchimp </li>
+                          <li> Helped design and build our real-time dashboard </li>
+                      </ul>
+                  </div>
+
+                </li>
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Junior Developer</strong>,
+                      <a href="thinkresearchgroup.com" target="_blank">Think Research Group</a>
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        <span class="space-right"> Sep 2013 -  Oct 2014  </span>
+                         <span> <i class="fa fa-clock-o icon-left"></i> 1 year 1 month </span> 
+                      </small>
+                    </p>
+                    <p>Cloud-based Healthcare platform</p>
+                      <ul>
+                          <li> Lead development of an order requisition web portal using Angular and Play! Framework </li>
+                          <li> Lead development of a web-form builder plugin for Chrome, Firefox &amp; IE </li>
+                          <li> Carried out various medical record migrations between various systems (SQLServer, InterSystems Cache ...) </li>
+                      </ul>
+                  </div>
+
+                </li>
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>SOC Verification Intern</strong>,
+                      <a href="amd.com" target="_blank">AMD</a>
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        <span class="space-right"> May 2011 -  Aug 2012  </span>
+                         <span> <i class="fa fa-clock-o icon-left"></i> 1 year 3 months </span> 
+                      </small>
+                    </p>
+                    <p>System-On-Chip Design Verification</p>
+                      <ul>
+                          <li> Verification infrastructure and development of random testing methodologies for various chip IP’s using Perl, C/C++ and SystemVerilog </li>
+                      </ul>
+                  </div>
+
+                </li>
+            </ul>
+
+            <h4 id="skills"> <span class="fa fa-lg fa-code"></span> <span class="title">Skills</span> </h4>
+            <ul class="list-unstyled">
+                <li class="card-nested skill master">
+                  <strong>Web Development (master):</strong> 
+                   <span class="enumeration">Django</span>  <span class="enumeration">Angular</span>  <span class="enumeration">Backbone</span> 
+              </li>
+            </ul>
+  
+            <h4 id="education"><span class="fa fa-lg fa-mortar-board"></span> <span class="title">Education</span></h4>
+            
+            <ul class="list-unstyled">
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Engineering Science - Electrical and Computer Engineering, Bachelor</strong>,&nbsp;
+                      University of Toronto
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        Sep 2008 -  Apr 2013 
+                      </small>
+                    </p>
+                    <i></i>
+                    <div class="space-top labels">
+                       <span class="label label-keyword">CSC401 - Natural Language Computing</span>  <span class="label label-keyword">CSC411 - Machine Learning and Data Mining</span>  <span class="label label-keyword">CSC418 - Computer Graphics</span>  <span class="label label-keyword">ECE454 - Computer Systems Programming</span>  <span class="label label-keyword">ECE353 - Systems Software</span> 
+                    </div>
+                  </div>
+                </li>
+            </ul>
+
+
+
+
+            <h4 id="interests"> <span class="fa fa-lg fa-heart"></span> <span class="title">Interests</span> </h4>
+            <ul class="list-unstyled">
+                <li class="card-nested">
+                  <p>
+                    <strong></strong>
+                  </p>
+
+                  <div class="space-top labels">
+                      <span class="label label-keyword">machine learning</span>
+                      <span class="label label-keyword">data science</span>
+                      <span class="label label-keyword">gamedev</span>
+                      <span class="label label-keyword">healthcare</span>
+                      <span class="label label-keyword">sports analytics</span>
+                      <span class="label label-keyword">startups</span>
+                  </div>
+                </li>
+            </ul>
+
+
+
+          </div>
+        </div>
+      </section>
+    </div>
+  <script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+
 
   </article>
 

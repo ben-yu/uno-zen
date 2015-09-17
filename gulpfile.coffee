@@ -37,7 +37,9 @@ src =
               'assets/vendor/ghostHunter/jquery.ghostHunter.min.js'
               'assets/vendor/pace/pace.min.js'
               'assets/vendor/fitvids/jquery.fitvids.js'
-              'assets/vendor/reading-time/build/readingTime.min.js']
+              'assets/vendor/reading-time/build/readingTime.min.js'
+              'assets/js/src/fitbit.js'
+              'assets/vendor/pusher/dist/pusher.js']
   css      :
     main   : 'assets/css/uno.css'
     vendor : []

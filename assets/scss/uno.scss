@@ -2,6 +2,7 @@
 // PRE
 // ------------------------------
 
+@import '../vendor/bourbon/app/assets/stylesheets/_bourbon.scss';
 @import 'modules/mixins.scss';
 
 // ------------------------------
@@ -28,3 +29,5 @@
 @import 'components/search.scss';
 @import 'components/loading.scss';
 @import 'components/media-queries.scss';
+@import 'components/fitbit.scss';
+

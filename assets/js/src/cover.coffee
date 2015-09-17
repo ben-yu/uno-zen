@@ -12,6 +12,8 @@ $ ->
 
   _expand = (options)->
     $('main, .cover, .link-item').toggleClass 'expanded'
+    $('.fitbit').toggle()
+    $('.avatar').toggle()
     Uno.search.form options.form
 
   $('#blog-button, #avatar-link').click ->
@@ -20,6 +22,8 @@ $ ->
 
   $("#menu-button").click ->
     $('main, .cover, #menu-button').toggleClass 'expanded'
+    $('.fitbit').toggle()
+    $('.avatar').toggle()
 
   if (Uno.is 'device', 'desktop') and (Uno.is 'page', 'home')
     _animate()
