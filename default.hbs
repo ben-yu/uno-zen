@@ -1,39 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <title>{{meta_title}}</title>
-
-  {{> meta}}
-
-  <link rel="stylesheet" type="text/css" href="{{asset "css/uno.css"}}" />
-
-  {{ghost_head}}
-
-</head>
-<body class="{{body_class}}">
-
-  <section id="menu-button" class="expanded">
-    <a><i class="icon icon-list"></i></a>
-  </section>
-
-  {{> aside}}
-
-  <main>
-    <section id="search-results"></section>
-    <section class="content">
-      {{{body}}}
-      {{> footer}}
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{meta_title}}</title>
+    {{> meta}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/uno-zen.css"}}" />
+    {{ghost_head}}
+  </head>
+  <body class="{{body_class}}">
+    <section id="menu-button" class="expanded">
+      <a><i class="icon icon-list"></i></a>
     </section>
-  </main>
-
-  {{ghost_foot}}
-  <script type="text/javascript" src="{{asset "js/uno.js"}}"></script>
-  {{> google-analytics}}
-  {{> mathjax}}
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-</body>
+    {{> aside}}
+    <main>
+      <section id="search-results"></section>
+      <section class="content">
+        {{{body}}}
+        {{> footer}}
+      </section>
+    </main>
+    {{ghost_foot}}
+    <script type="text/javascript" src="{{asset "js/uno-zen.js"}}"></script>
+    {{> google-analytics}}
+    {{> mathjax}}
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+  </body>
 </html>

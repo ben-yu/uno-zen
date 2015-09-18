@@ -1,7 +1,54 @@
+<a name="2.5.2"></a>
+## 2.5.2 (2015-09-11)
+
+
+* Fixed #50 ([074f743](https://github.com/kikobeats/uno-zen/commit/074f743)), closes [#50](https://github.com/kikobeats/uno-zen/issues/50)
+* Fixed #68 ([fe8b32d](https://github.com/kikobeats/uno-zen/commit/fe8b32d)), closes [#68](https://github.com/kikobeats/uno-zen/issues/68)
+* Fixes #70 ([7110954](https://github.com/kikobeats/uno-zen/commit/7110954)), closes [#70](https://github.com/kikobeats/uno-zen/issues/70)
+* jQuery injection from ghost_foot instead of inline ([1b2e852](https://github.com/kikobeats/uno-zen/commit/1b2e852))
+
+
+
+<a name="2.5.1"></a>
+## 2.5.1 (2015-09-09)
+
+
+* 2.5.1 releases ([a7dab00](https://github.com/kikobeats/uno-zen/commit/a7dab00))
+* fixed 404 page style ([60e2f18](https://github.com/kikobeats/uno-zen/commit/60e2f18))
+
+
+
+<a name="2.5.0"></a>
+# 2.5.0 (2015-09-09)
+
+
+* 2.5.0 releases ([28bb310](https://github.com/kikobeats/uno-zen/commit/28bb310))
+* Update README.md ([b7d8e7a](https://github.com/kikobeats/uno-zen/commit/b7d8e7a))
+* added #64 and #65 into showcase ([5541b0d](https://github.com/kikobeats/uno-zen/commit/5541b0d))
+* added jQuery dependency ([b8b815f](https://github.com/kikobeats/uno-zen/commit/b8b815f))
+* fixed hamburguer button space in tablet ([10acd12](https://github.com/kikobeats/uno-zen/commit/10acd12))
+* linted using CSSOrder ([9121c68](https://github.com/kikobeats/uno-zen/commit/9121c68))
+* replace behavior for event ([43bf742](https://github.com/kikobeats/uno-zen/commit/43bf742))
+* separated background from filter ([1beb4fe](https://github.com/kikobeats/uno-zen/commit/1beb4fe))
+* updated ([a0a162d](https://github.com/kikobeats/uno-zen/commit/a0a162d))
+* updated information. Now compatible with Ghost 0.7 🎉 ([fe343d1](https://github.com/kikobeats/uno-zen/commit/fe343d1))
+
+
+
+<a name="2.4.0"></a>
+# 2.4.0 (2015-08-31)
+
+
+* 2.4.0 releases ([033fd58](https://github.com/kikobeats/uno-zen/commit/033fd58))
+* Improve twitter share. rel me tag for social links ([eef7556](https://github.com/kikobeats/uno-zen/commit/eef7556))
+
+
+
 <a name="2.3.5"></a>
 ## 2.3.5 (2015-08-24)
 
 
+* 2.3.5 releases ([3ec3d83](https://github.com/kikobeats/uno-zen/commit/3ec3d83))
 * Added gln blog ([e8887b1](https://github.com/kikobeats/uno-zen/commit/e8887b1))
 * Fixed navigation URLs ([fe64b69](https://github.com/kikobeats/uno-zen/commit/fe64b69))
 * Merge pull request #54 from jcdenton/navigation_urls_fix ([58dc121](https://github.com/kikobeats/uno-zen/commit/58dc121))

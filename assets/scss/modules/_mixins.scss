@@ -1,11 +1,13 @@
 @mixin inline-code-style {
-  border: 1px solid #D9D9D9;
-  border-radius: 3px;
-  padding: 0.09rem 0.2rem;
+  padding: .09rem .2rem;
+
   font-family: $code-font;
-  font-weight: $font-weight-normal;
   font-size: .85rem;
+  font-weight: $font-weight-normal;
+
   color: $gray-dark;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
 }
 
 @mixin box-sizing($box-model) {
@@ -15,28 +17,35 @@
 }
 
 @mixin background-filter {
-  background: linear-gradient(150deg, $cover-secondary 30%, $cover-primary 70%)
-  0 0/cover fixed,url("https://i.imgur.com/jEdz2.png") center/cover no-repeat fixed;
+  background: linear-gradient(150deg, $cover-secondary 30%, $cover-primary 70%) 0 0/cover fixed;
 }
+
 @mixin center-absolute {
   display: flex;
-  justify-content: center;
+
   align-items: center;
+  justify-content: center;
 }
+
 @mixin font-shadow {
   text-shadow: 0 1px 1px rgba(000, 000, 000, .4);
 }
+
 @mixin btn-cover {
   position: relative;
+
   display: block;
+
   font-size: .9em;
-  font-weight: bold;
-  color: $gray-lightest;
-  text-shadow: none;
-  letter-spacing: 1px;
-  border-radius: 20px;
-  opacity: .8;
   -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  opacity: .8;
+  color: $gray-lightest;
+  border-radius: 20px;
+  text-shadow: none;
 
   &:hover {
     opacity: 1;
@@ -44,8 +53,9 @@
 }
 
 @mixin btn-cover-with-border {
-  @extend btn-cover;
   border: 1px solid $gray-lightest;
+
+  @extend btn-cover;
 }
 
 @mixin placeholder {

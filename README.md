@@ -1,8 +1,8 @@
 # Uno Zen for Ghost
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/uno-zen.svg?style=flat-square)
-[![Gittip](https://img.shields.io/badge/Ghost-0.6.x-brightgreen.svg?style=flat-squared)]()
-[![Gittip](http://img.shields.io/gittip/Kikobeats.svg?style=flat-squared)](https://www.gittip.com/Kikobeats)
+[![Gittip](https://img.shields.io/badge/Ghost-0.7.x-brightgreen.svg?style=flat-square)]()
+[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/kikobeats)
 
 > Minimalist and Elegant theme for Ghost.
 
@@ -27,6 +27,14 @@ Things that already existed:
 
 For more information check [changelog](https://github.com/Kikobeats/uno-zen/blob/master/CHANGELOG.md) section.
 
+## Install
+
+Enter in the theme folder (`content/themes`) of your Ghost installation and:
+
+```bash
+$ npm install uno-zen && mv node_modules/uno-zen uno-zen && (trash node_modules || rm -r node_modules)
+```
+
 ## Demo
 
 You can see a demo in my [blog](http://kikobeats.com). Also you can check the [styleguide](http://kikobeats.com/styleguide) to view how it looks.
@@ -38,16 +46,18 @@ You can see a demo in my [blog](http://kikobeats.com). Also you can check the [s
 <a target="blank" href="http://www.evilsocket.net"><img src="http://i.imgur.com/qanAbQf.png"></a>
 <a target="blank" href="http://pupboss.com"><img src="http://i.imgur.com/0AeVKgB.png"></a>
 <a target="blank" href="http://www.flaviocorpa.com"><img src="http://i.imgur.com/1ESq2xs.png" /></a>
-<a target="blank" href="http://morris.guru/"><img src="http://i.imgur.com/s9oimfG.png" /></a>
-<a target="blank" href="https://www.mooash.me/"><img src="http://i.imgur.com/Ojmkuvw.png" /></a>
-<a target="blank" href="http://jahlom.com/"><img src="http://i.imgur.com/qwgQ9Ay.png" /></a>
+<a target="blank" href="http://morris.guru"><img src="http://i.imgur.com/s9oimfG.png" /></a>
+<a target="blank" href="https://www.mooash.me"><img src="http://i.imgur.com/Ojmkuvw.png" /></a>
+<a target="blank" href="http://jahlom.com"><img src="http://i.imgur.com/qwgQ9Ay.png" /></a>
 <a target="blank" href="http://adrianperez.org"><img src="http://i.imgur.com/XlNFWWA.png" /></a>
 <a target="blank" href="http://www.bradenericson.com"><img src="http://i.imgur.com/8wz0LKN.png" /></a>
-<a target="blank" href="https://blog.h4t0n.com/"><img src="http://i.imgur.com/GPWzqnG.png" /></a>
-<a target="blank" href="https://www.guovz.com/"><img src="http://i.imgur.com/62TktSa.jpg" /></a>
-<a target="blank" href="http://robinz.in/"><img src="http://i.imgur.com/qDAbrch.jpg" /></a>
+<a target="blank" href="https://blog.h4t0n.com"><img src="http://i.imgur.com/GPWzqnG.png" /></a>
+<a target="blank" href="https://www.guovz.com"><img src="http://i.imgur.com/62TktSa.jpg" /></a>
+<a target="blank" href="http://robinz.in"><img src="http://i.imgur.com/qDAbrch.jpg" /></a>
 <a target="blank" href="http://www.iayon.com"><img src="http://i.imgur.com/vzZXfkf.png" /></a>
 <a target="blank" href="http://gln.me"><img src="http://i.imgur.com/v7N4hvi.png" /></a>
+<a target="blank" href="http://biercoff.com"><img src="http://i.imgur.com/goS3pE3.jpg" /></a>
+<a target="blank" href="https://randy.sesser.me"><img src="http://i.imgur.com/9hacUJc.jpg" /></a>
 </br>
 </br>
 </div>
