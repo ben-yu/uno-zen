@@ -126,6 +126,9 @@
        width: 100% !important;
     }
   }
+  .fibit {
+    display: none !important;
+  }
 }
 // ------------------------------
 // < 480px (Mobile)
@@ -195,5 +198,8 @@
     .project {
        width: 100% !important;
     }
+  }
+  .fibit {
+    display: none !important;
   }
 }

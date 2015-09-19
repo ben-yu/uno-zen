@@ -24,7 +24,12 @@ $ ->
     $('main, .cover, #menu-button').toggleClass 'expanded'
     $('.fitbit').toggle()
     $('.avatar').toggle()
+    if (Uno.is 'device', 'mobile') or (Uno.is 'device', 'tablet')
+      $('.fitbit').hide()
+      $('.avatar').show()
+
 
   if (Uno.is 'device', 'desktop') and (Uno.is 'page', 'home')
     _animate()
     _expand form: 'hide' if !isOpen
+

@@ -80,7 +80,7 @@ $( document ).ready(function(){
       dataKeys = [];
       series = [];
 
-      $.get('http://127.0.0.1:5000/stats', function(data){
+      $.get('http://ben-yu.com/fitbit/stats/', function(data){
         fitData = data;
         for (var key in data['goals']) {
           dataKeys.unshift(key)
