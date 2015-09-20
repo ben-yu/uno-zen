@@ -25,5 +25,5 @@ $ ->
   if Uno.is 'page', 'error'
     $('#panic-button').click ->
       s = document.createElement 'script'
-      s.setAttribute 'src','https://nthitz.github.io/turndownforwhatjs/tdfw.js'
+      s.setAttribute 'src','/assets/js/tdfw.js'
       document.body.appendChild s
