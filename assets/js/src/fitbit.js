@@ -84,7 +84,7 @@ $( document ).ready(function(){
         fitData = data;
         for (var key in data['goals']) {
           dataKeys.unshift(key)
-          series.push(data['goals'][key]);
+          series.unshift(data['goals'][key]);
         }
         initialize();
       });
@@ -307,7 +307,7 @@ $( document ).ready(function(){
 
       bar = d3.svg.arc()
           .innerRadius( mapRadius )
-          .outerRadius( function(d,i) { return mapRadius + radius( data[i] ); })
+          .outerRadius( function(d,i) { return mapRadius + radius( Math.min(data[i], 1.0) ); })
           .startAngle( function(d,i){ return Math.PI/16 * i + Math.PI/2})
           .endAngle( function(d,i){ return Math.PI/16 * i + (9 * Math.PI/16)});
 
@@ -319,7 +319,13 @@ $( document ).ready(function(){
 
       arcs.append("path")
           .attr("class", "piePath")
-          .attr("fill", "#14bfff")
+          .attr("fill", function(d, i) { 
+            if (data[i] >= 1) {
+              return "#2ecc71"
+            }
+
+            return "#14bfff"
+          })
           .attr("d", bar)
           .style("opacity", 0.4);
 
@@ -331,7 +337,7 @@ $( document ).ready(function(){
           .attr("transform", function(d, i) { //set text's origin to the centroid
             //we have to make sure to set these before calling arc.centroid
             d.innerRadius = mapRadius + 50; // Set Inner Coordinate
-            d.outerRadius = mapRadius + radius( data[i] ) + 50; // Set Outer Coordinate
+            d.outerRadius = mapRadius + radius(  Math.min(data[i], 1.0) ) + 50; // Set Outer Coordinate
             d.startAngle = Math.PI/16 * i;
             d.endAngle = Math.PI/16 * i + Math.PI/16
             return "translate(" + centroid(d) + ")rotate(" + angle(d, 0, 90) + ")";
