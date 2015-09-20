@@ -133,6 +133,15 @@ $arcs: hsl(188, 30%, 50%) normal linear 4s 0 solid 2px top right,
     border-radius: 50%;
     display: none;
 }
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
 
 @-webkit-keyframes arc-spinner { @include keyframes-arc-spinner(); }
 @-moz-keyframes arc-spinner { @include keyframes-arc-spinner(); }
