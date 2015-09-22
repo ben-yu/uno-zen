@@ -239,15 +239,15 @@ $( document ).ready(function(){
         'offset': '15%'
       });
 
-      drawCircularText({
-        'id': 'heart-rate-text',
-        'radius': 150,
-        'fontSize': 12,
-        'type': '',
-        'amount': data['heartRate'],
-        'units': 'bpm',
-        'offset': '5%'
-      });
+      // drawCircularText({
+      //   'id': 'heart-rate-text',
+      //   'radius': 150,
+      //   'fontSize': 12,
+      //   'type': '',
+      //   'amount': data['heartRate'],
+      //   'units': 'bpm',
+      //   'offset': '5%'
+      // });
   }
 
   var redrawBars = function(data) {
@@ -333,7 +333,13 @@ $( document ).ready(function(){
       arcs.append("svg:text")
           .attr("class", "pieText")
           .attr("dy", "5px")
-          .attr("text-anchor", "middle")
+          .attr("text-anchor", function(d, i) { 
+            if (data[i] >= 1) {
+              return "end"
+            }
+
+            return "middle"
+          })
           .attr("transform", function(d, i) { //set text's origin to the centroid
             //we have to make sure to set these before calling arc.centroid
             d.innerRadius = mapRadius + 50; // Set Inner Coordinate
