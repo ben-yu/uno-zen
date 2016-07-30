@@ -16,71 +16,72 @@ $arcs: hsl(188, 30%, 50%) normal linear 4s 0 solid 2px top right,
        hsl(188, 80%, 50%) alternate ease-in-out 4s 1s dashed 2px right bottom,
        hsl(188, 85%, 50%) alternate-reverse ease-in-out 4s 1.1s solid 4px left top;
 
+@function offset-width($offset) {
+    @return $width - $offset * 2;
+}
+
+@function offset-height($offset) {
+    @return $height - $offset * 2;
+}
+
+@mixin position($offset)
+{
+    position: absolute;
+    top: $offset;
+    left: $offset;
+    width: offset-width($offset);
+    height: offset-height($offset);
+    border-radius: 50%;
+}
+
+@mixin arc-clip($side, $top, $right, $bottom, $left)
+{
+    .arc-#{$side} {
+        clip: rect($top, $right, $bottom, $left);
+    }
+}
+
+@mixin arc-animation($number, $arcDef)
+{
+    $color: nth($arcDef, 1);
+    $direction: nth($arcDef, 2);
+    $timing: nth($arcDef, 3);
+    $duration: nth($arcDef, 4);
+    $delay: nth($arcDef, 5);
+    $pattern: nth($arcDef, 6);
+    $borderWidth: nth($arcDef, 7);
+    $sides: nth($arcDef, 8);
+
+    $arcOffset: ($number - 1) * $arcSpacing;
+    @include position($arcOffset);
+    @include animation-duration($duration);
+    @include transform(rotate(45deg));
+    @include animation-delay($delay);
+    @include animation-direction($direction);
+    @include animation-name(arc-spinner);
+    @include animation-iteration-count(infinite);
+    @include animation-timing-function($timing);
+
+    .arc-top, .arc-right, .arc-bottom, .arc-left {
+        border: $borderWidth $pattern $color;
+    }
+
+    @include arc-clip(top, 0, offset-width($arcOffset) / 2, offset-height($arcOffset) / 2, 0);
+    @include arc-clip(right, 0, offset-width($arcOffset), offset-height($arcOffset) / 2, offset-width($arcOffset) / 2);
+    @include arc-clip(bottom, offset-height($arcOffset) / 2, offset-width($arcOffset), offset-height($arcOffset), offset-width($arcOffset) / 2);
+    @include arc-clip(left, offset-height($arcOffset) / 2, offset-width($arcOffset) / 2, offset-height($arcOffset), 0);
+
+    @for $i from 6 through length($arcDef)
+    {
+        $side: nth($arcDef, $i);
+        .arc-#{$side} {
+            display: block;
+        }
+    }
+}
+
 @mixin arcs()
 {
-    @function offset-width($offset) {
-        @return $width - $offset * 2;
-    }
-
-    @function offset-height($offset) {
-        @return $height - $offset * 2;
-    }
-
-    @mixin position($offset)
-    {
-        position: absolute;
-        top: $offset;
-        left: $offset;
-        width: offset-width($offset);
-        height: offset-height($offset);
-        border-radius: 50%;
-    }
-
-    @mixin arc-clip($side, $top, $right, $bottom, $left)
-    {
-        .arc-#{$side} {
-            clip: rect($top, $right, $bottom, $left);
-        }
-    }
-
-    @mixin arc-animation($number, $arcDef)
-    {
-        $color: nth($arcDef, 1);
-        $direction: nth($arcDef, 2);
-        $timing: nth($arcDef, 3);
-        $duration: nth($arcDef, 4);
-        $delay: nth($arcDef, 5);
-        $pattern: nth($arcDef, 6);
-        $borderWidth: nth($arcDef, 7);
-        $sides: nth($arcDef, 8);
-
-        $arcOffset: ($number - 1) * $arcSpacing;
-        @include position($arcOffset);
-        @include animation-duration($duration);
-        @include transform(rotate(45deg));
-        @include animation-delay($delay);
-        @include animation-direction($direction);
-        @include animation-name(arc-spinner);
-        @include animation-iteration-count(infinite);
-        @include animation-timing-function($timing);
-
-        .arc-top, .arc-right, .arc-bottom, .arc-left {
-            border: $borderWidth $pattern $color;
-        }
-
-        @include arc-clip(top, 0, offset-width($arcOffset) / 2, offset-height($arcOffset) / 2, 0);
-        @include arc-clip(right, 0, offset-width($arcOffset), offset-height($arcOffset) / 2, offset-width($arcOffset) / 2);
-        @include arc-clip(bottom, offset-height($arcOffset) / 2, offset-width($arcOffset), offset-height($arcOffset), offset-width($arcOffset) / 2);
-        @include arc-clip(left, offset-height($arcOffset) / 2, offset-width($arcOffset) / 2, offset-height($arcOffset), 0);
-
-        @for $i from 6 through length($arcDef)
-        {
-            $side: nth($arcDef, $i);
-            .arc-#{$side} {
-                display: block;
-            }
-        }
-    }
 
     @for $i from 1 through length($arcs)
     {
@@ -111,6 +112,7 @@ $arcs: hsl(188, 30%, 50%) normal linear 4s 0 solid 2px top right,
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
+    z-index: 0; // Fix chrome rendering bug with border-radius
 }
 
 .arc-spinner {
